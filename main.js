@@ -27,6 +27,8 @@ io.on('connection', function(socket) {
   });
 });
 
-server.listen(8080, function() {  
-  console.log("Servidor corriendo en http://localhost:8080");
+app.set('port', process.env.PORT || 8080);
+
+server.listen(app.get('port'), function() {  
+  console.log("Servidor corriendo en el puerto: "+app.get('port'));
 });
