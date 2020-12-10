@@ -1,0 +1,6 @@
+.conBorde{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 90%;
+    padding: 1rem;
+}

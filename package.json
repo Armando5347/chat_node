@@ -1,0 +1,25 @@
+{
+  "name": "chat_node",
+  "version": "1.0.0",
+  "description": "Un chat sencillo usado websockets con node",
+  "main": "main.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "keywords": [
+    "ejemplo",
+    "chat",
+    "node"
+  ],
+  "author": "Armando Jarillo",
+  "license": "MIT",
+  "engines": {
+    "node": "14.15.0"
+  }
+}
