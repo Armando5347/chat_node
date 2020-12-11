@@ -35,8 +35,12 @@ function render (data) {
 function addMessage(e) {  
   let texto = document.getElementById('texto').value;
   let user = document.getElementById('username').value;
-  if(texto === '' || user === ''){
+  if(texto.trim() === '' || user.trim() === ''){
     alert("No me ingreses vacios por favor")
+    return false;
+  }
+  if(texto.lenght >= 100 ||usename.lenght >= 20){
+    alert("No ingreses con demasiada potencía")
     return false;
   }
   var message = {
@@ -47,6 +51,6 @@ function addMessage(e) {
   id_user = message.id;
   socket.emit('new-message', message);
   document.getElementById('texto').value = '';
-  document.getElementById('username').readonly = 'true';
+  document.getElementById('username').readOnly = 'true';
   return false;
 }
