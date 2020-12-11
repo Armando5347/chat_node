@@ -39,7 +39,7 @@ function addMessage(e) {
     alert("No me ingreses vacios por favor")
     return false;
   }
-  if(texto.lenght >= 100 ||usename.lenght >= 20){
+  if(texto.lenght >= 100 ||user.lenght >= 20){
     alert("No ingreses con demasiada potencía")
     return false;
   }
