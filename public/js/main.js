@@ -17,14 +17,14 @@ function render (data) {
         color = `alert alert-success`
       }
       return(`
-      <div class="row">
+      <div class=" espacio_abajo">
         <div class="col-md-12 input-group container-fluid">
           <span class='input-group-addon'>
           <strong><input type="text" class='form-control text-right ${color}' value='${elem.author}:' readonly='readonly'></strong>
           </span>
           <input type="text" class='form-control w-75 ${color}' value='${elem.text}' readonly='readonly'">
         </div>
-      </div>
+      </div
       <br>`);
   }).join(" ");
  
@@ -33,12 +33,20 @@ function render (data) {
 }
 
 function addMessage(e) {  
+  let texto = document.getElementById('texto').value;
+  let user = document.getElementById('username').value;
+  if(texto === '' || user === ''){
+    alert("No me ingreses vacios por favor")
+    return false;
+  }
   var message = {
-    author: document.getElementById('username').value,
-    text: document.getElementById('texto').value,
+    author: user,
+    text: texto,
     id: socket.id
   };
   id_user = message.id;
   socket.emit('new-message', message);
+  document.getElementById('texto').value = '';
+  document.getElementById('username').readonly = 'true';
   return false;
 }
