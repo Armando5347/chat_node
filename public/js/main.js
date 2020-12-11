@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8080', { 'forceNew': true });
+const socket = io();
 //Parte del cliente conectamos con localhost
 //escuchamos el evento messages
 // data tendr� el array de mensajes  que env�a el servidor
